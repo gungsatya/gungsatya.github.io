@@ -2,3 +2,76 @@
     Created for gungsatya.github.io
     September 25th, 2018 
 */
+@import url(https://fonts.googleapis.com/css?family=Biryani);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+body{
+    font-family: 'Biryani', sans-serif;
+    width: 100%;
+    background: #fbfbfb;
+}
+@media (min-width: 992px) {
+    section {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+        padding-top: 60px !important;
+    }
+    section#head .left{
+        text-align: right !important;
+    }
+    section#head .left h1{
+        font-size: 6em;
+    }
+    section#head .left h2{
+        font-size: 4em;
+    }
+    section#head .left h4{
+        font-size: 2.5em;
+    }
+    section#head .left p{
+        font-size: 1.2em;
+        letter-spacing: 3px !important;
+    }
+}
+.navbar-brand {
+    color: #222222 !important;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px;
+    border-color: #222222;
+    border-style: solid;
+    padding: 10px 10px 10px 10px;
+    letter-spacing: 1px;
+    text-decoration: none !important;
+}
+section{
+    padding:30px;
+}
+section#head{
+    width: 100%;
+    height: 100vh;
+}
+section#head .left{
+    text-align: left;
+}
+section#head .left h1{
+    font-weight: bold;
+    color: #222222;
+}
+section#head .left h4 .badge{
+    padding-top: .5em;
+}
+section#head .left h2 .badge{
+    letter-spacing: 5px;
+    padding-top: .5em;
+}
+section#head .left p{
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+section#head .right{
+    overflow: hidden;
+}
+section#head .right img{
+    bottom: 0px auto;
+}
