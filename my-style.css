@@ -2,19 +2,49 @@
     Created for gungsatya.github.io
     September 25th, 2018 
 */
+.overlay-white {
+    position: relative;
+    z-index: 1;
+}
+.overlay-white:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #222222;
+    background: -webkit-linear-gradient(45deg, #fbfbfb 50%, #fbfbfb 100%);
+    background: -o-linear-gradient(45deg, #fbfbfb 50%, #fbfbfb 100%);
+    background: linear-gradient(45deg, #fbfbfb 50%, #fbfbfb 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#fbfbfb', GradientType=1);
+    opacity: 0.85;
+    z-index: -2;
+}
+.line-style{
+    height: 5px;
+    width: 75px;
+    margin-bottom: 25px;
+    border: none;
+}
 @import url(https://fonts.googleapis.com/css?family=Biryani);
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-body{
+h1, h2, h3, h4, h5, h6{
     font-family: 'Biryani', sans-serif;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
     width: 100%;
+    height: 100%;
     background: #fbfbfb;
+    overflow-x: hidden;
 }
 @media (min-width: 992px) {
-    section {
-        padding-left: 60px !important;
-        padding-right: 60px !important;
-        padding-top: 60px !important;
+    section#head{
+        padding-top: 20vh !important;
     }
     section#head .left{
         text-align: right !important;
@@ -44,15 +74,16 @@ body{
     letter-spacing: 1px;
     text-decoration: none !important;
 }
-section{
-    padding:30px;
-}
 section#head{
-    width: 100%;
     height: 100vh;
+    background: url('bg.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 section#head .left{
-    text-align: left;
+    text-align: right;
 }
 section#head .left h1{
     font-weight: bold;
@@ -66,12 +97,73 @@ section#head .left h2 .badge{
     padding-top: .5em;
 }
 section#head .left p{
-    font-weight: bold;
     letter-spacing: 1px;
 }
-section#head .right{
-    overflow: hidden;
-}
 section#head .right img{
-    bottom: 0px auto;
+    width: 57%;
+    height: auto;
+}
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #343a40;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+.social:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+.social {
+    -webkit-transform: scale(0.8);
+    /* Browser Variations: */
+    
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+}
+
+/*
+   Multicoloured Hover Variations
+*/
+
+#social-fb:hover {
+    color: #3B5998;
+}
+#social-tw:hover {
+    color: #4099FF;
+}
+#social-gp:hover {
+    color: #d34836;
+}
+#social-em:hover {
+    color: #f39c12;
 }
