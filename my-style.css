@@ -42,9 +42,21 @@ body{
     background: #fbfbfb;
     overflow-x: hidden;
 }
+a {
+    color: #212529;
+    text-decoration: none;
+}
+
+a:hover 
+{
+     color:#212529; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
 @media (min-width: 992px) {
     section#head{
-        padding-top: 20vh !important;
+        padding-top: 5vh !important;
+        height: 70vh !important;
     }
     section#head .left{
         text-align: right !important;
@@ -76,6 +88,7 @@ body{
 }
 section#head{
     height: 100vh;
+    overflow: hidden;
     background: url('bg.jpg');
     background-position: center center;
     background-size: cover;
@@ -83,7 +96,7 @@ section#head{
     background-attachment: fixed;
 }
 section#head .left{
-    text-align: right;
+    text-align: center;
 }
 section#head .left h1{
     font-weight: bold;
@@ -93,8 +106,7 @@ section#head .left h4 .badge{
     padding-top: .5em;
 }
 section#head .left h2 .badge{
-    letter-spacing: 5px;
-    padding-top: .5em;
+    font-size: 100%;
 }
 section#head .left p{
     letter-spacing: 1px;
@@ -102,6 +114,7 @@ section#head .left p{
 section#head .right img{
     width: 57%;
     height: auto;
+    bottom: 0;
 }
 
 ul.timeline {

@@ -20,6 +20,16 @@
         crossorigin="anonymous">
     <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="my-style.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132749820-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-132749820-1');
+    </script>
 </head>
 
 <body>
@@ -29,19 +39,20 @@
             </a>
         </div>
     </nav>
-    <section id="head" class="overlay-white d-flex align-items-center">
+    <section id="head" class="overlay-white">
         <!-- <div class="container"> -->
         <div class="row">
-            <div class="col-md-6 left p-5">
+            <div class="col-md-6 left">
                 <h1 class="text-secondary">Hi.</h1>
-                <h4>I am <span class="badge badge-secondary">I Gusti Bagus Ngurah</span></h4>
-                <h2><span class="badge badge-dark">Satya Wibawa</span></h2>
+                <h2>I am <span class="badge badge-secondary">Satya</span></h2>
                 <hr>
                 <p>Website, IoT, Chatbot Developer</p>
                 <hr>
             </div>
-            <div class="col-md-6 right d-flex align-items-end justify-content-center">
-                <img src="pic.png" alt="Profile Picture">
+            <div class="col-md-6 right">
+                <div class="d-flex align-items-end justify-content-center justify-content-md-start">
+                    <img src="pic1.png" alt="Profile Picture">
+                </div>
             </div>
         </div>
         <!-- </div> -->
@@ -82,12 +93,12 @@
                 <div class="container">
                     <h2 class="text-center pt-2 pb-2"> <i class="fa fa-fire text-danger"></i> Expertise </h2>
                     <hr class="line-style bg-primary">
-                    <div class="row mb-3">
+                    <div class="row mb-2">
                         <div class="col-sm-3 text-center p-2">
                             <h1><i class="fa fa-laptop-code"></i></h1>
                         </div>
                         <div class="col-sm-9">
-                            <h6 class="mb-3">Website Development</h6>
+                            <h6 class="mb-2">Website Development</h6>
                             <small>I have the skills to create websites, design databases, and a few CSS/JS
                                 customizations.</small>
                         </div>
@@ -98,7 +109,7 @@
                             <h1><i class="fa fa-microchip"></i></h1>
                         </div>
                         <div class="col-sm-9">
-                            <h6 class="mb-3">Internet of Thing</h6>
+                            <h6 class="mb-2">Internet of Thing</h6>
                             <small>I had a class project about the IoT, and have designed smart car application.
                             </small>
                         </div>
@@ -109,7 +120,7 @@
                             <h1><i class="fa fa-robot"></i></h1>
                         </div>
                         <div class="col-sm-9">
-                            <h6 class="mb-3">Rule-based Chatbot</h6>
+                            <h6 class="mb-2">Rule-based Chatbot</h6>
                             <small>My thesis is about a public services chatbot development.</small>
                         </div>
                     </div>
@@ -119,7 +130,7 @@
                             <h1><i class="fa fa-code-branch"></i></h1>
                         </div>
                         <div class="col-sm-9">
-                            <h6 class="mb-3">Version Control</h6>
+                            <h6 class="mb-2">Version Control</h6>
                             <small>I experienced in version control applications such as GitHub, gitab, and bitbucket.</small>
                         </div>
                     </div>
@@ -143,17 +154,18 @@
                         <div class="col-md-12">
                             <ul class="timeline">
                                 <li>
+                                    <h6 class="mb-2">Universitas Udayana
+                                        <span class="float-right">2014 - 2018</span></h6>
+                                    <p>I took a data and information management concentration and graduated with a
+                                        "Very Satisfying" predicate (GPA 3.65). My thesis titled "Designing 'Whisper'
+                                        Chatbot to
+                                        Support Smart City Services".</p>
+                                </li>
+                                <li>
                                     <h6 class="mb-2">SMA Negeri 1 Singaraja
                                         <span class="float-right">2011 - 2014</span></h6>
                                     <p>I took a science concentration and graduated with a lot of achievements and a
                                         satisfying cumulative score on the national exam.</p>
-                                </li>
-                                <li>
-                                    <h6 class="mb-2">Universitas Udayana
-                                        <span class="float-right">2014 - 2018</span></h6>
-                                    <p>I took a data and information management concentration and graduated with a
-                                        "Very Satisfying" predicate. My thesis titled "Designing 'Whisper' Chatbot to
-                                        Support Smart City Services".</p>
                                 </li>
                             </ul>
                         </div>
@@ -162,22 +174,26 @@
             </div>
             <div class="col-md-6 p-5 bg-light">
                 <div class="container">
-                    <h2 class="text-center pt-2 pb-2"> <i class="fa fa-suitcase"></i> Experience </h2>
+                    <h2 class="text-center pt-2 pb-2"> <i class="fa fa-suitcase"></i> Experiences </h2>
                     <hr class="line-style bg-success">
                     <div class="row">
                         <div class="col-md-12">
                             <ul class="timeline">
                                 <li>
-                                    <h6 class="mb-2">Ayoantre.com
-                                        <span class="float-right">Mar 2018 - Oct 2018</span></h6>
-                                    <p>Ayoantre.com is a queuing and transaction management startup. My responsibility
-                                        are managing databases, designing and developing websites, and managing
-                                        teammates.</p>
-                                </li>
-                                <li>
                                     <h6 class="mb-2">AW Bali Web Design and Development
                                         <span class="float-right">Oct 2018 - current </span></h6>
-                                    <p>Now i join web development office as a Fullstack Web Developer.</p>
+                                    <p>Now I join web development office as a Full-stack Web Developer. My
+                                        responsibilities are managing and developing 2 startups (Cari-kos.com and
+                                        Reseppedia) and some other project.
+                                    </p>
+                                </li>
+                                <li>
+                                    <h6 class="mb-2">Ayoantre.com
+                                        <span class="float-right">Mar 2018 - Oct 2018</span></h6>
+                                    <p>Ayoantre.com is a queuing and transaction management startup. My
+                                        responsibilities
+                                        are managing databases, designing and developing websites, and managing
+                                        teammates.</p>
                                 </li>
                             </ul>
                         </div>
@@ -190,39 +206,73 @@
         <div class="container">
             <h2 class="text-center pt-2 pb-2"> <i class="fa fa-camera text-info"></i> Portofolio </h2>
             <hr class="line-style bg-secondary">
-            <div class="card-group">
+            <div class="card-group mb-3">
                 <div class="card">
                     <img class="card-img-top" src="pos.png" alt="Point of Sales">
                     <div class="card-body">
-                        <h5 class="card-title">Point of Sales</h5>
+                        <h5 class="card-title">AyoAntre Point Of Sales</h5>
                         <p class="card-text">One of my tasks on ayoantre.com is to create a point of sales system with
                             simple economic calculations and connect it with hardware such as barcode scanners and
                             printers.</p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Ayoantre.com</small>
+                        <a href="//ayoantre.com" class="text-muted card-link">visit ayoantre.com</a>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="sharetrans.png" alt="ShareTrans Landing Page">
                     <div class="card-body">
-                        <h5 class="card-title">Landing Page</h5>
-                        <p class="card-text">I designed a landing page from a startup that is engaged in
-                            transportation leasing.</p>
+                        <h5 class="card-title">ShareTrans Launcing Page</h5>
+                        <p class="card-text">I had join a startup that is engaged in
+                            transportation leasing. I designed a launching page </p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">ShareTrans</small>
+                        <a href="//sharetrans.id" class="text-muted card-link">visit sharetrans.id</a>
                     </div>
                 </div>
                 <div class="card">
                     <img class="card-img-top" src="whisper.png" alt="Chatbot Whisper">
                     <div class="card-body">
-                        <h5 class="card-title">Chatbot</h5>
+                        <h5 class="card-title">Goverment Report Chatbot</h5>
                         <p class="card-text">My thesis is about designing a chatbot through the Telegram application
                             that has features to create a public complaint system, surveys and news dissemination.</p>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Whisper</small>
+                        <a href="//chatbot.citizenlab.web.id" class="text-muted">visit whisper</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-group mb-3">
+                <div class="card">
+                    <img class="card-img-top" src="cari-kos.png" alt="Point of Sales">
+                    <div class="card-body">
+                        <h5 class="card-title">Cari-Kos</h5>
+                        <p class="card-text">Cari-kos.com is a startup engaged in providing boarding house information.
+                            Here I learned about GIS (Geographic Information System).</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="//cari-kos.com" class="text-muted card-link">visit cari-kos.com</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="reseppedia.png" alt="ShareTrans Landing Page">
+                    <div class="card-body">
+                        <h5 class="card-title">Reseppedia</h5>
+                        <p class="card-text">Reseppedia is an online site that provides a complete collection of
+                            recipes. I learned a lot about UI / UX in this application. </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="//reseppedia.com" class="text-muted card-link">visit reseppedia.com</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="jaribu.png" alt="Chatbot Whisper">
+                    <div class="card-body">
+                        <h5 class="card-title">Jaribu</h5>
+                        <p class="card-text">Jaribu is a project to make market place for therapeutic / spa providers</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="//jaribu.id" class="text-muted">visit jaribu</a>
                     </div>
                 </div>
             </div>
@@ -232,15 +282,15 @@
         <h4 class="text-center pt-2 pb-2"> <i class="fa fa-heart text-danger"></i> Be My Partner on</h4>
         <!-- <hr class="bg-light"> -->
         <div class="text-center center-block">
-            <h3>
-                <a class="btn pt-3 pb-2 btn-lg btn-outline-warning" href="https://www.linkedin.com/in/gung-satya/">
+            <h6 class="mb-3 mt-3">
+                <a class="btn pt-3 pb-2 btn-outline-warning" href="https://www.linkedin.com/in/gung-satya/">
                     <ion-icon name="logo-linkedin" id="social-fb" class="fa-3x social"></ion-icon></i>
                 </a>
-                <a class="btn pt-3 pb-2 btn-lg btn-outline-danger" href="mailto:i.g.b.n.satyawibawa@gmail.com">
+                <a class="btn pt-3 pb-2 btn-outline-danger" href="mailto:igbn.satyawibawa@gmail.com">
                     <ion-icon name="mail" id="social-em" class="fa-3x social">
                 </a>
-            </h3>
-            <small class="text-white text-center">&copy; github.com/gungsatya</small>
+            </h6>
+            <a href="//github.com/gungsatya" class="text-white text-center">&copy; github.com/gungsatya</a>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
