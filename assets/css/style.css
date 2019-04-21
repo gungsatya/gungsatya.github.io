@@ -6,6 +6,7 @@
     position: relative;
     z-index: 1;
 }
+
 .overlay-white:before {
     content: "";
     position: absolute;
@@ -17,64 +18,81 @@
     background: -webkit-linear-gradient(45deg, #fbfbfb 50%, #fbfbfb 100%);
     background: -o-linear-gradient(45deg, #fbfbfb 50%, #fbfbfb 100%);
     background: linear-gradient(45deg, #fbfbfb 50%, #fbfbfb 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#fbfbfb', GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbfbfb', endColorstr='#fbfbfb', GradientType=1);
     opacity: 0.85;
     z-index: -2;
 }
-.line-style{
+
+.line-style {
     height: 5px;
     width: 75px;
     margin-bottom: 25px;
     border: none;
 }
-@import url(https://fonts.googleapis.com/css?family=Biryani);
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-h1, h2, h3, h4, h5, h6{
-    font-family: 'Biryani', sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Source Code Pro', monospace;
     font-weight: bold;
     margin: 0px;
     padding: 0px;
 }
-body{
-    font-family: 'Montserrat', sans-serif;
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
     width: 100%;
     height: 100%;
     background: #fbfbfb;
     overflow-x: hidden;
 }
+
 a {
     color: #212529;
     text-decoration: none;
 }
 
-a:hover 
-{
-     color:#212529; 
-     text-decoration:none; 
-     cursor:pointer;  
+a:hover {
+    color: #212529;
+    text-decoration: none;
+    cursor: pointer;
 }
+
 @media (min-width: 992px) {
-    section#head{
+    section#head {
+        height: 50vh !important;
         padding-top: 5vh !important;
-        height: 70vh !important;
     }
-    section#head .left{
+
+    section#head .left {
         text-align: right !important;
     }
-    section#head .left h1{
+
+    section#head .left h1 {
         font-size: 6em;
     }
-    section#head .left h2{
-        font-size: 4em;
+
+    section#head .left h2 {
+        font-size: 3em;
     }
-    section#head .left h4{
+
+    section#head .left h4 {
         font-size: 2.5em;
     }
-    section#head .left p{
+
+    section#head .left p {
         font-size: 1.2em;
         letter-spacing: 3px !important;
     }
+
+    section#head .right img {
+        width: 57% !important;
+    }
 }
+
 .navbar-brand {
     color: #222222 !important;
     font-weight: 600;
@@ -86,7 +104,8 @@ a:hover
     letter-spacing: 1px;
     text-decoration: none !important;
 }
-section#head{
+
+section#head {
     height: 100vh;
     overflow: hidden;
     background: url('../img/bg.jpg');
@@ -94,25 +113,28 @@ section#head{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    padding-top: 12vh;
 }
-section#head .left{
+
+section#head .left {
     text-align: center;
 }
-section#head .left h1{
+
+section#head .left h1 {
     font-weight: bold;
     color: #222222;
 }
-section#head .left h4 .badge{
+
+section#head .left h4 .badge {
     padding-top: .5em;
 }
-section#head .left h2 .badge{
+
+section#head .left h2 .badge {
     font-size: 100%;
 }
-section#head .left p{
-    letter-spacing: 1px;
-}
-section#head .right img{
-    width: 57%;
+
+section#head .right img {
+    width: 100%;
     height: auto;
     bottom: 0;
 }
@@ -121,6 +143,7 @@ ul.timeline {
     list-style-type: none;
     position: relative;
 }
+
 ul.timeline:before {
     content: ' ';
     background: #d4d9df;
@@ -131,11 +154,13 @@ ul.timeline:before {
     height: 100%;
     z-index: 400;
 }
-ul.timeline > li {
+
+ul.timeline>li {
     margin: 20px 0;
     padding-left: 20px;
 }
-ul.timeline > li:before {
+
+ul.timeline>li:before {
     content: ' ';
     background: white;
     display: inline-block;
@@ -153,10 +178,11 @@ ul.timeline > li:before {
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
 }
+
 .social {
     -webkit-transform: scale(0.8);
     /* Browser Variations: */
-    
+
     -moz-transform: scale(0.8);
     -o-transform: scale(0.8);
     -webkit-transition-duration: 0.5s;
@@ -171,12 +197,15 @@ ul.timeline > li:before {
 #social-fb:hover {
     color: #3B5998;
 }
+
 #social-tw:hover {
     color: #4099FF;
 }
+
 #social-gp:hover {
     color: #d34836;
 }
+
 #social-em:hover {
     color: #f39c12;
 }
