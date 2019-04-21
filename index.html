@@ -17,11 +17,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.0/css/all.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Nunito+Sans">
     <link rel="stylesheet" type="text/css" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugin/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/plugin/owl-carousel/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132749820-1"></script>
@@ -38,7 +39,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-fixed-top p-3">
+    <nav class="navbar navbar-expand-lg navbar-fixed-top ">
         <div class="container">
             <a class="navbar-brand"> <span class="text-primary">Satya's</span> Portofolio</a>
             <button class="navbar-toggler text-dark" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -46,15 +47,16 @@
                 <span class="fa fa-bars"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto text-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="https://linkedin.com/in/gung-satya"><i class="fa-linkedin-in"></i> LinkedIn</a>
+                        <a class="nav-link" href="https://linkedin.com/in/gung-satya"><ion-icon name="logo-linkedin" class="fa-2x"></ion-icon></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.facebook.com/satya.wibawa"><i class="fa fa-facebook-f"></i> Facebook</a>
+                        <a class="nav-link" href="https://www.facebook.com/satya.wibawa"><ion-icon name="logo-facebook" class="fa-2x"></ion-icon></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="mailto:igbn.satyawibawa@gmail.com"><i class="fa fa-mail-bulk"></i> Email</a>
+                        <a class="nav-link" href="mailto:igbn.satyawibawa@gmail.com"><ion-icon name="mail" class="fa-2x"></ion-icon>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -62,11 +64,11 @@
     </nav>
     <section id="head" class="overlay-white">
         <div class="row">
-            <div class="col-md-7 left">
-                <h1 class="text-secondary">Hi</h1>
-                <h2>I am <span class="badge badge-secondary" id="typed"></span></h2>
+            <div class="col-md-6 left">
+                <h1 class="pb-3">I am </h1>
+                <h2><span class="badge badge-secondary" id="typed"></span></h2>
             </div>
-            <div class="col-md-5 right">
+            <div class="col-md-6 right">
                 <div class="d-flex align-items-end justify-content-center justify-content-md-start">
                     <img src="assets/img/pic1.png" alt="Profile Picture">
                 </div>
@@ -158,7 +160,14 @@
     <section id="framework" class="bg-white p-5 text-center" style="width:100%">
         <h2 class="text-center pt-2 pb-2"> <i class="fa fa-seedling text-success"></i> What i have learn </h2>
         <hr class="line-style bg-info">
-        <img src="assets/img/exp.png" alt="Expertise" class="img-fluid img-thumbnail">
+        <div class="owl-carousel owl-theme">
+            <img class="owl-lazy" data-src="assets/img/skill/resized/laravel.png" alt="Laravel Framework">
+            <img class="owl-lazy" data-src="assets/img/skill/resized/vue.png" alt="Vue Framework">
+            <img class="owl-lazy" data-src="assets/img/skill/resized/angular.png" alt="Angular Framework">
+            <img class="owl-lazy" data-src="assets/img/skill/resized/java.png" alt="Java Lang">
+            <img class="owl-lazy" data-src="assets/img/skill/resized/spring.png" alt="Spring Framework">
+            <img class="owl-lazy" data-src="assets/img/skill/resized/python.png" alt="Python Lang">
+        </div>
     </section>
     <section id="portofolio" class="bg-white p-5" style="width:100%">
         <div class="container">
@@ -166,8 +175,8 @@
             <hr class="line-style bg-secondary">
             <div class="card-columns mb-3">
                 <div class="card">
-                    <a href="assets/img/pos.png" class="img-pop-up" title="AyoAntre Point of Sales">
-                        <img class="card-img-top" src="assets/img/pos.png" alt="Point of Sales">
+                    <a href="assets/img/portofolio/pos.png" class="img-pop-up" title="AyoAntre Point of Sales">
+                        <img class="card-img-top" src="assets/img/portofolio/pos.png" alt="Point of Sales">
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">AyoAntre Point Of Sales</h5>
@@ -176,12 +185,13 @@
                             printers.</p>
                     </div>
                     <div class="card-footer">
-                        <a href="//ayoantre.com" class="text-muted card-link"><i class="fa fa-link"></i> Visit ayoantre.com</a>
+                        <a href="//ayoantre.com" class="text-muted card-link"><i class="fa fa-link"></i> Visit
+                            ayoantre.com</a>
                     </div>
                 </div>
                 <div class="card">
-                    <a href="assets/img/sharetrans.png" class="img-pop-up" title="Sharetrans Launching Page">
-                        <img class="card-img-top" src="assets/img/sharetrans.png" alt="ShareTrans Landing Page">
+                    <a href="assets/img/portofolio/sharetrans.png" class="img-pop-up" title="Sharetrans Launching Page">
+                        <img class="card-img-top" src="assets/img/portofolio/sharetrans.png" alt="ShareTrans Landing Page">
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">ShareTrans Launcing Page</h5>
@@ -189,12 +199,13 @@
                             transportation leasing. I designed a launching page </p>
                     </div>
                     <div class="card-footer">
-                        <a href="//sharetrans.id" class="text-muted card-link"><i class="fa fa-link"></i> Visit sharetrans.id</a>
+                        <a href="//sharetrans.id" class="text-muted card-link"><i class="fa fa-link"></i> Visit
+                            sharetrans.id</a>
                     </div>
                 </div>
                 <div class="card">
-                    <a href="assets/img/whisper.png" class="img-pop-up" title="Whisper Chatbot">
-                        <img class="card-img-top" src="assets/img/whisper.png" alt="Chatbot Whisper">
+                    <a href="assets/img/portofolio/whisper.png" class="img-pop-up" title="Whisper Chatbot">
+                        <img class="card-img-top" src="assets/img/portofolio/whisper.png" alt="Chatbot Whisper">
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">Goverment Report Chatbot</h5>
@@ -202,12 +213,13 @@
                             that has features to create a public complaint system, surveys and news dissemination.</p>
                     </div>
                     <div class="card-footer">
-                        <a href="//chatbot.citizenlab.web.id" class="text-muted"><i class="fa fa-link"></i>Visit whisper</a>
+                        <a href="//chatbot.citizenlab.web.id" class="text-muted"><i class="fa fa-link"></i>Visit
+                            whisper</a>
                     </div>
                 </div>
                 <div class="card">
-                    <a href="assets/img/cari-kos.png" class="img-pop-up" title="Cari-Kos.com">
-                        <img class="card-img-top" src="assets/img/cari-kos.png" alt="Point of Sales">
+                    <a href="assets/img/portofolio/cari-kos.png" class="img-pop-up" title="Cari-Kos.com">
+                        <img class="card-img-top" src="assets/img/portofolio/cari-kos.png" alt="Point of Sales">
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">Cari-Kos</h5>
@@ -215,12 +227,13 @@
                             Here I learned about GIS (Geographic Information System).</p>
                     </div>
                     <div class="card-footer">
-                        <a href="//cari-kos.com" class="text-muted card-link"><i class="fa fa-link"></i> Visit cari-kos.com</a>
+                        <a href="//cari-kos.com" class="text-muted card-link"><i class="fa fa-link"></i> Visit
+                            cari-kos.com</a>
                     </div>
                 </div>
                 <div class="card">
-                    <a href="assets/img/reseppedia.png" class="img-pop-up" title="Reseppedia">
-                        <img class="card-img-top" src="assets/img/reseppedia.png" alt="ShareTrans Landing Page">
+                    <a href="assets/img/portofolio/reseppedia.png" class="img-pop-up" title="Reseppedia">
+                        <img class="card-img-top" src="assets/img/portofolio/reseppedia.png" alt="ShareTrans Landing Page">
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">Reseppedia</h5>
@@ -228,12 +241,13 @@
                             recipes. I learned a lot about UI / UX in this application. </p>
                     </div>
                     <div class="card-footer">
-                        <a href="//reseppedia.com" class="text-muted card-link"><i class="fa fa-link"></i> Visit reseppedia.com</a>
+                        <a href="//reseppedia.com" class="text-muted card-link"><i class="fa fa-link"></i> Visit
+                            reseppedia.com</a>
                     </div>
                 </div>
                 <div class="card">
-                    <a href="assets/img/jaribu.png" class="img-pop-up" title="Jaribu - Terapist Vendor">
-                        <img class="card-img-top" src="assets/img/jaribu.png" alt="Chatbot Whisper">
+                    <a href="assets/img/portofolio/jaribu.png" class="img-pop-up" title="Jaribu - Terapist Vendor">
+                        <img class="card-img-top" src="assets/img/portofolio/jaribu.png" alt="Chatbot Whisper">
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">Jaribu</h5>
@@ -264,6 +278,7 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script src="assets/plugin/owl-carousel/owl.carousel.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/style.js"></script>
 </body>

@@ -3,7 +3,7 @@
 //  September 25th, 2018
 // 
 
-window.onload = function () {
+$(document).ready(function () {
   $('.img-pop-up').magnificPopup({
     type: 'image',
     tLoading: 'Loading image #%curr%...',
@@ -26,4 +26,10 @@ window.onload = function () {
     loop: true,
     typeSpeed: 200
   });
-}
+  $(".owl-carousel").owlCarousel({
+    items:6,
+    lazyLoad:true,
+    loop:true,
+    autoWidth: true
+  });
+});
