@@ -89,7 +89,7 @@ a:hover
 section#head{
     height: 100vh;
     overflow: hidden;
-    background: url('bg.jpg');
+    background: url('../img/bg.jpg');
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
