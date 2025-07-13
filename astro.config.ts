@@ -20,7 +20,7 @@ import {
   updateStyle
 } from './src/plugins/shiki-transformers.ts'
 import config from './src/site.config.ts'
-import staticAdapter from '@astrojs/vercel/static'
+import staticAdapter from '@astrojs/adapter-static';
 
 // https://astro.build/config
 export default defineConfig({
