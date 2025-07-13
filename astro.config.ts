@@ -20,20 +20,20 @@ import {
   updateStyle
 } from './src/plugins/shiki-transformers.ts'
 import config from './src/site.config.ts'
-import staticAdapter from '@astrojs/adapter-static';
+import vercel from '@astrojs/vercel'
 
 // https://astro.build/config
 export default defineConfig({
   // Top-Level Options
-  site: 'https://astro-pure.js.org',
+  site: 'https://gungsatya.github.io',
   // base: '/docs',
   trailingSlash: 'never',
 
   // Adapter
   // https://docs.astro.build/en/guides/deploy/
   // 1. Vercel (serverless)
-  adapter: staticAdapter(),
-  output: 'static',
+  // adapter: versel(),
+  // output: 'server',
   // 2. Vercel (static)
   // adapter: vercelStatic(),
   // 3. Local (standalone)
@@ -111,3 +111,7 @@ export default defineConfig({
     ]
   }
 })
+function versel(): import("astro").AstroIntegration | undefined {
+  throw new Error('Function not implemented.')
+}
+
