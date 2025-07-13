@@ -69,8 +69,8 @@ const projectIconSet: Record<string, iconsType> = {
             >
               <a
                 class='line-clamp-1 font-medium text-foreground no-underline transition-colors'
-                href={project.links[0].href}
-                target='_blank'
+                href={project.links.length > 0 ? project.links[0].href : 'javascript:void(0)'}
+                target={project.links.length > 0 ? '_blank' : ''}
               >
                 {project.name}
               </a>

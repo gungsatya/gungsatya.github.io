@@ -1,157 +1,223 @@
 ---
-import { Comment } from 'astro-pure/advanced'
-import { Button, Collapse, Spoiler, Timeline } from 'astro-pure/user'
+import avatar from '@/assets/avatar.jpeg'
+import { Card } from 'astro-pure/user'
 import PageLayout from '@/layouts/CommonPage.astro'
 import Substats from '@/components/about/Substats.astro'
 import ToolSection from '@/components/about/ToolSection.astro'
+import config from '@/site-config'
+import { Image } from 'astro:assets'
 
 const headings = [
-  { depth: 2, slug: 'hobbies', text: 'Hobbies' },
+  { depth: 2, slug: 'experiences', text: 'Experiences' },
   { depth: 2, slug: 'tools', text: 'Tools' },
   { depth: 2, slug: 'social-networks', text: 'Social Networks' },
-  { depth: 2, slug: 'gossips', text: 'Gossips' },
-  { depth: 2, slug: 'about-blog', text: 'About Blog' }
 ]
 ---
 
-<PageLayout title='About' {headings} info='/about'>
-  <p>Developer / Designer</p>
+<PageLayout title='About' {headings} info={{ slug: '/about', hideComment: true }}>
+  <Image
+        src={avatar}
+        alt='profile'
+        class='h-33 w-auto border p-1'
+        loading='eager'
+      />
+  <p>Website Developer / Mobile Developer</p>
   <p>
-    Lorem ipsum dolor sit amet, vidit suscipit at mei. Quem denique mea id. Usu ei regione indoctum
-    dissentiunt, cu meliore fuisset mei, vel quod voluptua ne. Ex dicat impedit mel, at eum oratio
-    possit voluptatum.
+    Hi, I’m {config.author} a.k.a {config.title} — a passionate and detail-oriented Website and Mobile Developer based in Bali, Indonesia, 
+    with over five years of professional experience building dynamic and user-centric Website and Mobile applications. 
+    I hold a Bachelor’s degree in Information Technology from Fakultas Teknik at Universitas Udayana, 
+    where I developed a strong foundation in programming, software engineering, and system design.
   </p>
-  <p>
-    My motto: Stay hungry, Stay foolish. <Spoiler>这里可以夹私货，比如为什么要演奏春日影！</Spoiler>
+  <p>Since 2018, I’ve been working across various sectors, contributing to the development of both frontend and 
+    backend systems. My work emphasizes clean code, scalability, and performance — whether I’m building custom business 
+    applications, e-commerce platforms, or internal enterprise tools. I'm experienced in technologies like JavaScript,
+     TypeScript, Angular, React, Flutter, Node.js, and Spring Boot, and I take pride in writing maintainable code that 
+     solves real-world problems.
   </p>
-  <Button title='Sponsor Me' class='w-fit' href='/projects#sponsorship' style='ahead' />
+  <p>In addition to technical skills, I value communication, collaboration, and continuous learning. I’m always eager to explore new tools, 
+    frameworks, and methodologies that enhance the way we build modern software. Whether working independently or as part of a team,
+     my goal is always the same: to deliver quality solutions that align with business goals and exceed user expectations.</p>
 
-  {/* general-talk */}
-  <h2 id='hobbies'>Hobbies</h2>
-  <ul>
-    <li>Lorem ipsum dolor sit amet, vidit suscipit at mei.</li>
-    <li>
-      Quem denique mea id. Usu ei regione indoctum dissentiunt, cu meliore fuisset mei, vel quod
-      voluptua ne.
-    </li>
-    <li>Ex dicat impedit mel, at eum oratio possit voluptatum.</li>
-    <li>Impetus fuisset ullamcorper pri cu, his posse iisque ad, aliquam honestatis usu id.</li>
-  </ul>
+  <h2 id="experiences">Experiences</h2>
+  <div class='flex flex-1 flex-col gap-y-3'>
+    <Card
+      heading='PT. Sigma Cipta Caraka (Telkomsigma)'
+      subheading='Programmer'
+      date='Feb 2019 - Present'
+      />
+    <Card
+      heading='Patala Stock'
+      subheading='Fullstack Developer'
+      date='Feb 2024 - Jul 2024'
+    />
+    <Card
+      heading='AW Bali Web Design and Development'
+      subheading='Fullstack Programmer'
+      date='Oct 2018 - Jan 2019'
+      />
+    <Card
+      heading='AyoAntre.com'
+      subheading='Fullstack Programmer'
+      date='Mar 2018 - Sep 2018'
+    />
+  </Section> 
 
   {/* tools */}
   <h2 id='tools'>Tools</h2>
-  <p>Current support tools as follow:</p>
+  <p>Currently, I work with the following tools and technologies in my daily development workflow</p>
   <ToolSection
     class='mb-5'
-    title='Design'
+    title='Programming Languages'
     tools={[
       {
-        name: 'Photoshop',
-        description: 'Picture Editing',
-        href: 'https://www.adobe.com/products/photoshop',
-        icon: import('@/assets/tools/photoshop.svg?raw')
+        name: 'Java',
+        description: '',
+        href: 'https://www.java.com',
+        icon: import('@/assets/programming/java.svg?raw')
       },
       {
-        name: 'Illustrator',
-        description: 'Vector Drawing',
-        href: 'https://www.adobe.com/products/illustrator',
-        icon: import('@/assets/tools/illustrator.svg?raw')
+        name: 'Javascript',
+        description: '',
+        href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+        icon: import('@/assets/programming/javascript.svg?raw')
       },
       {
-        name: 'After Effects',
-        description: 'Motion Graphics',
-        href: 'https://www.adobe.com/products/aftereffects',
-        icon: import('@/assets/tools/aftereffects.svg?raw')
+        name: 'Typescript',
+        description: '',
+        href: 'https://www.typescriptlang.org/',
+        icon: import('@/assets/programming/typescript.svg?raw')
       },
       {
-        name: 'Premiere Pro',
-        description: 'Video Editing',
-        href: 'https://www.adobe.com/products/premiere',
-        icon: import('@/assets/tools/premiere.svg?raw')
+        name: 'PHP',
+        description: '',
+        href: 'https://www.php.net/',
+        icon: import('@/assets/programming/php.svg?raw')
+      },
+      {
+        name: 'Python',
+        description: '',
+        href: 'https://www.python.org/',
+        icon: import('@/assets/programming/python.svg?raw')
+      },
+      {
+        name: 'Dart',
+        description: '',
+        href: 'https://dart.dev/',
+        icon: import('@/assets/programming/dart.svg?raw')
+      },
+      {
+        name: 'Go',
+        description: '(onprogress)',
+        href: 'https://go.dev/',
+        icon: import('@/assets/programming/go.svg?raw')
       }
     ]}
   />
   <ToolSection
     class='mb-5'
-    title='Productivity'
+    title='Frameworks'
     tools={[
       {
-        name: 'Chrome',
-        description: 'Browser',
-        href: 'https://www.google.com/chrome/',
-        icon: import('@/assets/tools/chrome.svg?raw')
+        name: 'Angular',
+        description: 'for Frontend Website',
+        href: 'https://angular.dev/',
+        icon: import('@/assets/programming/angular.svg?raw')
       },
       {
-        name: 'Firefox',
-        description: 'Browser',
-        href: 'https://www.mozilla.org/en-US/firefox',
-        icon: import('@/assets/tools/firefox.svg?raw')
+        name: 'Flutter',
+        description: 'for Mobile Apps',
+        href: 'https://flutter.dev/',
+        icon: import('@/assets/programming/flutter.svg?raw')
       },
       {
-        name: 'Notion',
-        description: 'Note Taking',
-        href: 'https://www.notion.so/',
-        icon: import('@/assets/tools/notion.svg?raw')
+        name: 'React',
+        description: 'for Frontend Website',
+        href: 'https://react.dev/',
+        icon: import('@/assets/programming/react.svg?raw')
       },
       {
-        name: 'Typora',
-        description: 'Markdown Editor',
-        href: 'https://typora.io/',
-        icon: import('@/assets/tools/typora.svg?raw')
+        name: 'Vue',
+        description: 'for Frontend Website',
+        href: 'https://vuejs.org/',
+        icon: import('@/assets/programming/vuejs.svg?raw')
+      },
+      {
+        name: 'Laravel',
+        description: 'for Fullstack Web App',
+        href: 'https://laravel.com/',
+        icon: import('@/assets/programming/laravel.svg?raw')
+      },
+      {
+        name: 'Spring',
+        description: 'for Microservice',
+        href: 'https://spring.io/',
+        icon: import('@/assets/programming/spring.svg?raw')
+      },
+      {
+        name: 'Astro',
+        description: 'for Bloging',
+        href: 'https://astro.build/',
+        icon: import('@/assets/programming/astro.svg?raw')
       }
     ]}
   />
   <ToolSection
     class='mb-5'
-    title='Development'
+    title='Databases'
     tools={[
       {
-        name: 'VS Code',
-        description: 'IDE',
-        href: 'https://code.visualstudio.com/',
-        icon: import('@/assets/tools/vscode.svg?raw')
+        name: 'MySQL',
+        description: '',
+        href: 'https://www.mysql.com/',
+        icon: import('@/assets/programming/mysql.svg?raw')
       },
       {
-        name: 'Neovim',
-        description: 'IDE',
-        href: 'https://neovim.io/',
-        icon: import('@/assets/tools/neovim.svg?raw')
+        name: 'Oracle',
+        description: '',
+        href: 'https://www.oracle.com/',
+        icon: import('@/assets/programming/oracle.svg?raw')
       },
       {
-        name: 'Sublime Text',
-        description: 'IDE',
-        href: 'https://www.sublimetext.com/',
-        icon: import('@/assets/tools/sublime.svg?raw')
+        name: 'Microsoft SQL Server',
+        description: '',
+        href: 'https://www.microsoft.com/en-us/sql-server',
+        icon: import('@/assets/programming/sqlserver.svg?raw')
+      },
+      {
+        name: 'PostgreSQL',
+        description: '',
+        href: 'https://www.postgresql.org/',
+        icon: import('@/assets/programming/postgresql.svg?raw')
       }
     ]}
   />
   <ToolSection
     class='mb-5'
-    title='Environment'
+    title='Miscellaneous'
     tools={[
       {
-        name: 'Arch Linux',
-        description: 'Linux Distribution',
-        href: 'https://archlinux.org/',
-        icon: import('@/assets/tools/archlinux.svg?raw')
+        name: 'Git',
+        description: 'Version Control System',
+        href: 'https://git-scm.com/',
+        icon: import('@/assets/programming/git.svg?raw')
       },
       {
-        name: 'Ubuntu 24.04 LTS',
-        description: 'Linux Distribution',
-        href: 'https://ubuntu.com/',
-        icon: import('@/assets/tools/ubuntu.svg?raw')
+        name: 'Jira',
+        description: 'Project Management Tool',
+        href: 'https://www.atlassian.com/software/jira',
+        icon: import('@/assets/programming/jira.svg?raw')
       },
       {
-        name: 'MacOS Tahoe',
-        description: 'MacBook Air',
-        href: 'https://www.apple.com/macos/',
-        icon: import('@/assets/tools/apple.svg?raw')
+        name: 'Jenkins',
+        description: 'CI/CD',
+        href: 'https://www.jenkins.io/',
+        icon: import('@/assets/programming/jenkins.svg?raw')
       },
       {
-        name: 'Windows 11',
-        description: 'Framework Laptop 16',
-        href: 'https://news.microsoft.com/windows11-general-availability/',
-        icon: import('@/assets/tools/windows11.svg?raw')
+        name: 'Docker',
+        description: 'Virtualization Container (onprogress)',
+        href: 'https://www.docker.com/',
+        icon: import('@/assets/programming/docker.svg?raw')
       }
     ]}
   />
@@ -159,103 +225,24 @@ const headings = [
   {/* social-networks */}
   <h2 id='social-networks'>Social Networks</h2>
   <p>
-    Lorem ipsum dolor sit amet, vidit suscipit at mei. Quem denique mea id. Usu ei regione indoctum
-    dissentiunt, cu meliore fuisset mei, vel quod voluptua ne.
+    I love meeting new people! If you're passionate about website or mobile development, I'd love to connect. You can find me on social media or send me a message below.
   </p>
   <Substats
     stats={[
       {
         platform: 'GitHub',
         icon: 'github',
-        link: 'https://github.com/cworld1',
+        link: 'https://github.com/gungsatya',
         text: 'followers',
-        api: 'github/cworld1'
+        api: 'github/gungsatya'
       },
       {
-        platform: 'Telegram',
-        icon: 'telegram',
-        color: '#2ca5e0',
-        link: 'https://t.me/cworld0_cn',
-        text: 'subscribers',
-        api: 'telegram/cworld0_cn'
+        platform: 'Email',
+        icon: 'email',
+        color: '#FF0000',
+        link: 'mailto:i.g.b.n.satyawibawa@gmail.com',
+        text: '',
       },
-      {
-        platform: 'Weibo',
-        icon: 'weibo',
-        color: '#e71f19',
-        link: 'https://weibo.com/cworld0',
-        text: 'followers',
-        api: 'weibo/5501674056'
-      },
-      {
-        platform: 'Steam',
-        icon: 'steam',
-        color: '#50769d',
-        link: 'https://steamcommunity.com/id/cworld',
-        text: 'games',
-        api: 'steamgames/76561199021278120'
-      }
     ]}
   />
-
-  {/* gossips */}
-  <h2 id='gossips'>Gossips</h2>
-  <Collapse title='Lorem ipsum'>
-    Lorem ipsum dolor sit amet, vidit suscipit at mei. Quem denique mea id. Usu ei regione indoctum
-    dissentiunt, cu meliore fuisset mei, vel quod voluptua ne. Ex dicat impedit mel, at eum oratio
-    possit voluptatum.
-  </Collapse>
-
-  {/* about-blog */}
-  <h2 id='about-blog'>About Blog</h2>
-  <p>Website history:</p>
-  <Timeline
-    events={[
-      {
-        date: '2024-04-29',
-        content:
-          'Website refactored using <a href="https://astro.build/" target="_blank">Astro</a> and <a href="https://github.com/srleom/astro-theme-resume" target="_blank">Astro Theme Resume</a>'
-      },
-      {
-        date: '2024-07-26',
-        content:
-          'Website abstracted as a theme and published on <a href="https://github.com/cworld1/astro-theme-pure"target="_blank">Github</a>'
-      },
-      {
-        date: '2024-07-27',
-        content: 'Began writing website docs'
-      }
-    ]}
-  />
-  <p>
-    The smooth operation and personalized customization of website also rely on the resources and
-    technical support provided by the following excellent projects/service providers:
-  </p>
-  <ul>
-    <li>Domain: <a href='#' target='_blank'>Vercel</a></li>
-    <li>
-      Framework & Theme: <a href='https://astro.build/' target='_blank'>Astro</a> + <a
-        href='https://github.com/cworld1/astro-theme-pure'
-        target='_blank'>Astro Theme Pure</a
-      >
-    </li>
-    <li>
-      Site hosting: <a href='https://vercel.com/' target='_blank'>Vercel</a>
-    </li>
-    <li>
-      CI/CD: <a href='https://vercel.com/workflow' target='_blank'>Vercel Workflow</a>
-    </li>
-    <!-- <li>Resources speedup: <a href='https://cdn.cbd.int/' target='_blank'>CBD CDN</a></li> -->
-    <li>Comment system: <a href='https://waline.js.org' target='_blank'>Waline</a></li>
-    <li>
-      Visits: <a href='https://supabase.com/' target='_blank'>Supabase</a> +
-      <a href='https://waline.js.org/' target='_blank'>Waline</a>
-    </li>
-    <li>
-      Other statistics: <a href='https://github.com/spencerwooo/substats' target='_blank'
-        >Substats</a
-      >
-    </li>
-  </ul>
-  <Comment slot='bottom' />
 </PageLayout>

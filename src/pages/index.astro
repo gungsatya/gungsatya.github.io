@@ -1,24 +1,31 @@
 ---
 import { Image } from 'astro:assets'
 
-import { Quote } from 'astro-pure/advanced'
 import { PostPreview } from 'astro-pure/components/pages'
 import { getBlogCollection, sortMDByDate } from 'astro-pure/server'
-import { Button, Card, Icon, Label } from 'astro-pure/user'
+import { Button,  Icon, Label } from 'astro-pure/user'
 import PageLayout from '@/layouts/BaseLayout.astro'
-import ProjectCard from '@/components/home/ProjectCard.astro'
 import Section from '@/components/home/Section.astro'
-import SkillLayout from '@/components/home/SkillLayout.astro'
-import avatar from '@/assets/avatar.png'
+import avatar from '@/assets/avatar.jpeg'
 import config from '@/site-config'
 
-const languages = ['Html', 'JavaScript', 'CSS', 'Shell']
-const frontend = ['TypeScript', 'Vite', 'Webpack', 'Astro']
-const backend = ['Vercel', 'Waline']
+// const languages = ['Html', 'JavaScript', 'CSS', 'Shell']
+// const frontend = ['TypeScript', 'Vite', 'Webpack', 'Astro']
+// const backend = ['Vercel', 'Waline']
 
 const MAX_POSTS = 10
 const allPosts = await getBlogCollection()
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
+
+// Tahun awal
+const startYear = 2018;
+
+// Dapatkan tahun sekarang secara dinamis
+const currentYear = new Date().getFullYear();
+
+// Hitung selisihnya
+const yearDifference = currentYear - startYear;
+
 ---
 
 <PageLayout meta={{ title: 'Home' }} highlightColor='#659EB9'>
@@ -34,13 +41,13 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
       <div class='flex flex-col items-center gap-y-4'>
         <h1 class='text-3xl font-bold'>{config.author}</h1>
         <div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
-          <Label title='China'>
+          <Label title='Bali, Indonesia'>
             <Icon name='location' class='size-5' slot='icon' />
           </Label>
           <Label
             title='Source code'
             as='a'
-            href='https://github.com/cworld1/astro-theme-pure'
+            href='https://github.com/gungsatya'
             target='_blank'
           >
             <Icon name='github' class='size-5' slot='icon' />
@@ -50,8 +57,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
       {/* Get template */}
       <a
-        href='https://github.com/cworld1/astro-theme-pure'
-        target='_blank'
+        href='mailto:i.g.b.n.satyawibawa@gmail.com'
         class='flex flex-row items-center gap-x-3 rounded-full border bg-background px-4 py-2 text-sm shadow-sm transition-shadow hover:shadow-md'
       >
         <span class='relative flex items-center justify-center'>
@@ -60,17 +66,15 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
           ></span>
           <span class='size-2 rounded-full bg-green-400'></span>
         </span>
-        <p class='font-medium text-muted-foreground'>Get Template</p>
+        <p class='font-medium text-muted-foreground'>Available for Freelance</p>
       </a>
     </section>
 
     <div id='content' class='animate flex flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
       <Section title='About'>
-        <p class='text-muted-foreground'>Developer / Designer</p>
+        <p class='text-muted-foreground'>Website Developer / Mobile Developer</p>
         <p class='text-muted-foreground'>
-          Lorem ipsum dolor sit amet, vidit suscipit at mei. Quem denique mea id. Usu ei regione
-          indoctum dissentiunt, cu meliore fuisset mei, vel quod voluptua ne. Ex dicat impedit mel,
-          at eum oratio possit voluptatum.
+          I'm a Computer Science graduate from Universitas Udayana with {yearDifference} years (since 2018) of programming experience. I love experimenting with new technologies and thrive in both in team and solo projects. My passion for learning drives me to quickly adapt and deliver effective solutions. <b>Let's connect if you're looking for fresh ideas and technical expertise!</b>
         </p>
         <Button title='More about me' class='w-fit self-end' href='/about' style='ahead' />
       </Section>
@@ -89,35 +93,34 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         )
       }
 
-      {
-        /* <Section title='Experience'>
-      <Card
-        heading='Lorem Ipsum'
-        subheading='Sit amet consectetur'
-        date='Dec 2022 - Nov 2023'
-        imagePath='/src/assets/about-astro.png'
-        altText='Lorem, ipsum dolor sit'
-        imageClass='h-12 w-auto md:-start-16'
-      >
-        <ul class='ms-4 list-disc text-muted-foreground'>
-          <li>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
-            molestiae laboriosam pariatur!
+      {/*  <Section title='Experience'>
+        <Card
+          heading='Lorem Ipsum'
+          subheading='Sit amet consectetur'
+          date='Dec 2022 - Nov 2023'
+          imagePath='/src/assets/about-astro.png'
+          altText='Lorem, ipsum dolor sit'
+          imageClass='h-12 w-auto md:-start-16'
+        >
+          <ul class='ms-4 list-disc text-muted-foreground'>
+            <li>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
+              molestiae laboriosam pariatur!
 
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
-          </li>
-        </ul>
-      </Card>
-      <Card
-        heading='Lorem Ipsum'
-        subheading='Sit amet consectetur'
-        date='Dec 2022 - Nov 2023'
-        imagePath='/src/assets/about-astro.png'
-        altText='Lorem, ipsum dolor sit'
-        imageClass='h-12 w-auto md:-start-16'
-      />
-    </Section> */
-      }
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
+            </li>
+          </ul>
+        </Card>
+        <Card
+          heading='Lorem Ipsum'
+          subheading='Sit amet consectetur'
+          date='Dec 2022 - Nov 2023'
+          imagePath='/src/assets/about-astro.png'
+          altText='Lorem, ipsum dolor sit'
+          imageClass='h-12 w-auto md:-start-16'
+        />
+      </Section> 
+
       <Section title='Education'>
         <Card
           as='a'
@@ -126,15 +129,13 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
           date='August 2021 - July 2025'
           href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
         >
-          {
-            /* <ul class='ms-4 list-disc text-muted-foreground'>
+        <ul class='ms-4 list-disc text-muted-foreground'>
           <li>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
             molestiae laboriosam pariatur!
           </li>
           <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
-        </ul> */
-          }
+        </ul> 
         </Card>
       </Section>
 
@@ -181,8 +182,8 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
         <SkillLayout title='Languages' skills={languages} />
         <SkillLayout title='Frontend' skills={frontend} />
         <SkillLayout title='Backend' skills={backend} />
-      </Section>
+      </Section> */}
     </div>
-    <Quote class='mt-12' />
+    <!-- <Quote class='mt-12' /> -->
   </main>
 </PageLayout>
