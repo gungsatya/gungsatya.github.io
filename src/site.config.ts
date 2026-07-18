@@ -55,6 +55,7 @@ export const theme: ThemeUserConfig = {
 
   /** Configure the footer of your site. */
   footer: {
+    year: '2024 - 2026',
     links: [
       // Registration link
       {
@@ -72,14 +73,17 @@ export const theme: ThemeUserConfig = {
     /** Enable displaying a “Astro & Pure theme powered” link in your site’s footer. */
     credits: true,
     /** Optional details about the social media accounts for this site. */
-    social: { github: 'https://github.com/gungsatya' }
+    social: [
+      { icon: 'github', label: 'GitHub', href: 'https://github.com/gungsatya' }
+    ]
   },
 
   content: {
-    externalLinksContent: ' ↗',
+    externalLinks: {
+      content: ' ↗'
+    },
     /** Blog page size for pagination (optional) */
     blogPageSize: 8,
-    externalLinkArrow: true, // show external link arrow
     // Currently support weibo, x, bluesky
     share: ['x']
   }
